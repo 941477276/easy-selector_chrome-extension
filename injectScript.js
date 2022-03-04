@@ -45,13 +45,16 @@ function documentBindEvents(){
   var elTopWithMouseY = 0;
 
   var mouseDownFn = function (e) {
-    if(elementContains(toolbarEl, e.target) || !isActive){
+    if(elementContains(toolbarEl, e.target) && !isActive){
       var elRect = toolbarEl.getBoundingClientRect();
       elLeftWithMouseX = e.pageX - elRect.left;
       elTopWithMouseY = e.pageY - elRect.top;
       isMouseDown = true;
       mouseDownTime = new Date().getTime();
       return;
+    }
+    if(!isActive){
+      return;;
     }
 
     // 设置高亮选中节点的元素的pointerEvents为auto，以达到禁用选中节点的点击事件效果
