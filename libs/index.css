@@ -1,0 +1,72 @@
+.easy-selector-toolbar{
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    z-index: 9999;
+    padding: 8px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.35);
+    background-color: #fff;
+}
+.easy-selector-toolbar .easy-selector-fun{
+    display: inline-block;
+    vertical-align: middle;
+}
+.easy-selector-toolbar .easy-selector-fun button{
+    display: block;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+}
+.easy-selector-toolbar .get-ele-selector svg{
+    fill: currentColor;
+    transition: fill .1s;
+}
+.easy-selector-toolbar .get-ele-selector.is-use svg,
+.easy-selector-toolbar .get-ele-selector:hover svg{
+    fill: #409EFF;
+}
+
+.easy-selector-mask{
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none; /* 让事件可穿透 */
+    background-color: rgba(64,158,255, 0.5);
+}
+
+
+.easy-selector-message{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 99999;
+    /*min-width: 200px;*/
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #e1f3d8;
+    transform: translateX(-50%) translateY(0);
+    transition: transform 0.2s;
+    color: #67c23a;
+    background-color: #f0f9eb;
+}
+.easy-selector-message.enter{
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.easy-selector-popper .tippy-box{
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #3E55E1;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
+}
+.easy-selector-popper .tippy-arrow{
+    color: #3E55E1;
+}
+.easy-selector-popper .tippy-content{
+    padding: 8px 12px;
+}
